@@ -1,7 +1,7 @@
 {{#get "posts" include="tags,primary_tag" filter="featured:true" limit="all" as |featured|}}
     {{#if featured}}
         <section class="featured-wrapper container">
-            <h2 class="featured-title">Featured articles</h2>
+            <h2 class="featured-title">Published Articles</h2>
             <div class="featured-feed owl">
                 {{#foreach featured visibility="all"}}
                     <article class="{{post_class}}">
