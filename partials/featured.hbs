@@ -1,4 +1,4 @@
-{{#get "posts" filter="featured:true" limit="all" as |featured|}}
+{{#get "posts" include="tags,primary_tag" filter="featured:true" limit="all" as |featured|}}
     {{#if featured}}
         <section class="featured-wrapper container">
             <h2 class="featured-title">Featured articles</h2>
@@ -15,6 +15,7 @@
                             </div>
                         {{/if}}
                         <h3 class="post-title">{{title}}</h3>
+                        <p class="feed-length">{{primary_tag.name}}</p>
                         <a class="u-permalink" href={{url}}
                             aria-label="{{title}}"></a>
                     </article>
